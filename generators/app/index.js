@@ -105,7 +105,9 @@ module.exports = class extends Generator {
   downLoad() {
     let done = this.async();
     const o = ora('开始下载模板...').start();
-    downLoadGitRepo('sawyersven/sea-admin', this.destinationRoot(), function(err) {
+    downLoadGitRepo('sawyersven/sea-admin', this.destinationRoot(), function(
+      err
+    ) {
       o.stop();
       done(err);
     });
